@@ -5,7 +5,7 @@
     echo '<div class="menu">';
     
     foreach($pages as $page){
-        if(strpos($page, '.php') && strcmp ($page, 'navigation.php') !== 0){
+        if(strpos($page, '.php') && strcmp ($page, 'navigation.php') !== 0 && !str_contains($page, 'hate')){
             $link = $mydir.'/'.$page;
             $safeName = str_replace('.php', '', $page);
             echo '<a href="'.$link.'">'.$safeName.'</a> &nbsp; &nbsp;';
